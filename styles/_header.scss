@@ -1,0 +1,73 @@
+@use 'variables';
+
+a {
+  text-decoration: none;
+  color: variables.$font-color;
+  font-family: 'Alata', sans-serif;
+}
+
+.hero {
+  position: relative;
+  width: 100vw;
+  height: 650px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url('/images/desktop/image-hero.jpg');
+  background-size: cover;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 68px;
+  
+  .nav__links {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    gap: 32px;
+  
+  }
+
+  .nav__logo {
+    width: 192px;
+    height: 32px;
+  }
+}
+
+h1 {
+  margin-top: 8rem;
+  font-size: 4.5rem;
+  width: 650px;
+  color: variables.$font-color;
+  font-weight: 100;
+  text-transform: uppercase;
+  border: 1px solid variables.$font-color;
+  padding: 40px;
+}
+
+@media only screen and (max-width: 768px) {
+  .hero {
+    height: 100dvh;
+    background-image: url('/images/mobile/image-hero.jpg');
+    background-size: cover;
+  }
+
+  .nav {
+    padding-top: 2.5rem;
+  }
+
+  .nav__links {
+    display: none;
+  }  
+  
+  h1 {
+      width: 327px;
+      font-size: 2.5rem;
+      padding: 26px 24px 24px 24px;
+      margin: 6rem auto;
+      border: 2px solid variables.$font-color;
+    }
+
+    .container {
+      padding-inline: 1.5rem;
+    }
+  }
